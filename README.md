@@ -5,6 +5,17 @@ TopQuiz Android App for OpenClassrooms
 
 <img src="./art/screen0.png" width="30%">&ensp;<img src="./art/screen1.png" width="30%">
 
+
+## **Project learning goals:**
+
+ - Identify and integrate basic layout components
+ - Use basic widgets in a layout
+ - Identify and use the main functions in Android Studio
+ - Create new activities and indicate which ones the OS should launch
+ - Identify the main components of the MVC model and their functions
+ - Use the MVC model to organize your code
+ - Use widgets to communicate with users
+ - Manage the lifecycle of an application and its components
 ## Libraries Used
 
 * [Android Support Library](https://developer.android.com/topic/libraries/support-library/)
