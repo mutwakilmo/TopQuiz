@@ -3,6 +3,7 @@ package com.mutwakilmo.android.topquiz.controller;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
@@ -10,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.os.Handler;
 
 import com.mutwakilmo.android.topquiz.R;
 import com.mutwakilmo.android.topquiz.model.Question;
@@ -89,23 +89,15 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        int userAnswer = (int) v.getTag();
+        int responseIndex = (int) v.getTag();
 
-        if (userAnswer == mCurrentQuestion.getAnswerIndex()) {
+        if (responseIndex == mCurrentQuestion.getAnswerIndex()) {
             // Good answer
             Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show();
             mScore++;
         } else {
             // Wrong answer
             Toast.makeText(this, "Wrong answer!", Toast.LENGTH_SHORT).show();
-        }
-
-        if (--mNumberOfQuestions == 0){
-            //End Game
-            endGame();
-        } else {
-            mCurrentQuestion = mQuestionBank.getQuestion();
-            displayQuestion(mCurrentQuestion);
         }
 
         mEnableTouchEvents = false;
@@ -127,8 +119,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             }
         }, 2000); // LENGTH_SHORT is usually 2 second long
     }
-
-
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
@@ -210,8 +200,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 question8,
                 question9));
     }
-
-
 
     @Override
     protected void onStart() {
