@@ -25,7 +25,7 @@ TopQuiz Android App for OpenClassrooms
 
 ![enter image description here](https://avatars1.githubusercontent.com/u/41000818?s=460&v=4)
 
-[**Mutwakil Mo**](https://mutwakilmo.netlify.com/)
+[**Mutwakil Mo**](https://www.linkedin.com/in/mutwakil-mo/)
 
 ## License
 
