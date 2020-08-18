@@ -1,5 +1,5 @@
 # TopQuiz
-TopQuiz Android App for OpenClassrooms
+TopQuiz Android Quiz App for OpenClassrooms
 
 ## Screenshots
 
